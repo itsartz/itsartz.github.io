@@ -1,0 +1,136 @@
+* {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+:root {
+  --green: rgb(123, 193, 19);
+}
+body {
+  background-color: var(--green);
+  display: flex;
+  justify-content: center;
+  padding: 32px;
+  font-size: 18px;
+  font-weight: 300;
+}
+::-webkit-scrollbar {
+  width: 20px;
+  background: var(--green);
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: white;
+}
+::-webkit-scrollbar-thumb:hover {
+  background:black; 
+}
+.todo {
+  padding: 32px;
+  background-color: #fff;
+  width: 90vw;
+  border-radius: 10px;
+}
+.content {
+}
+#header {
+}
+.new {
+  --size: 50px;
+  display: flex;
+  padding: 16px 0px 16px;
+}
+.new input {
+  margin-right: 16px;
+  font-size: 20px;
+  padding: 8px 12px;
+  height: var(--size);
+  border: 2px solid var(--green);
+  border-radius: 7px;
+  flex-grow: 1;
+}
+.new input:focus {
+  outline: none;
+}
+.btn {
+  cursor: pointer;
+  text-align: center;
+  line-height: calc(var(--size) * 0.95);
+  height: var(--size);
+  width: var(--size);
+  border: 1px solid var(--green);
+  font-size: 30px;
+  font-weight: 200;
+  border-radius: var(--size);
+  background: var(--green);
+}
+.list > *:not(:last-child){
+  margin-bottom: 8px;
+}
+.task {
+  --size: 35px;
+  display: flex;
+  align-items: center;
+  min-height: var(--size);
+}
+.task:hover .del {
+  display: block;
+}
+.completed .task_title{
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.498);
+}
+.checkbox {
+  margin-right: 16px;
+}
+.checkbox input {
+  display: none;
+}
+.checkbox input:checked + div {
+  background-color: var(--green);
+}
+.checkbox input:checked + div::after{
+  display: block;
+}
+.checkbox div {
+  --size: 28px;
+  text-align: center;
+  cursor: pointer;
+  height: var(--size);
+  width: var(--size);
+  border: 2px solid var(--green);
+  border-radius: 4px;
+  position: relative;
+  font-size: 25px;
+}
+.checkbox div::after {
+  content: "✓";
+  line-height: calc(var(--size) * 0.95);
+  text-align: center;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.task_title{
+}
+.del {
+  display: none;
+  margin-left: auto;
+  margin-right: 0;
+  cursor: pointer;
+  text-align: center;
+  line-height: calc(var(--size) * 0.88);
+  height: var(--size);
+  width: var(--size);
+  border: 1px solid var(--green);
+  font-size: 30px;
+  font-weight: 200;
+  border-radius: var(--size);
+  background: var(--green);
+}
