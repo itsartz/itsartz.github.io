@@ -48,7 +48,7 @@ body {
   font-size: 20px;
   padding: 8px 12px;
   height: var(--size);
-  width: 1300px;
+  flex-grow: 1;
   border: 2px solid var(--green);
   border-radius: 7px;
 }
